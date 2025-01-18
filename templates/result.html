@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translation Completed</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <h1>Translation Completed!</h1>
+
+    <div class="video-container">
+        <!-- Original Video -->
+        <div class="video-box">
+            <h3>Original Video</h3>
+            <video controls>
+                <source src="{{ original_video_url }}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <!-- Translated Video -->
+        <div class="video-box">
+            <h3>Translated Video</h3>
+            <video controls>
+                <source src="{{ translated_video_url }}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+    <!-- Download Button -->
+    <a href="{{ translated_video_url }}" download>Download Translated Video</a>
+</body>
+</html>
